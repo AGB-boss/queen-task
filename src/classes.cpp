@@ -4,16 +4,21 @@
 namespace Chess
 {
 
+const Solution Solution::m_emptyObject = {};
 
 Solution::Solution(const Solution &src)
+    : m_final(src.isFinal())
 {
 
 }
 
-const Solution &SolutionsSet::getBestSolution()
+Solution Solution::makeChildSolution() const
 {
-    if (m_bestSolution == nullptr)
-    
+    return Solution();
 }
 
-}// end namespace Chess
+void SolutionHash::addPiece(BoardCell cell)
+{
+}
+
+} // end namespace Chess
